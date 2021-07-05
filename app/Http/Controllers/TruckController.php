@@ -22,11 +22,7 @@ class TruckController extends Controller
             $request->OS
         ];
 
-
-            // dd($params);
-
             $insert = DB::select('sp_DeliverLog_insert ?,?,?,?,?,?', $params);
-            // dd($insert);
             $num = $insert[0]->RETURN;
             $datetime = $insert[0]->datetime;
 
